@@ -1,7 +1,6 @@
-version: "3.8"
 services:
   build:
-    image: gcc:9.5.0
+    image: gcc:16.2.0
     volumes: 
     - type: bind
       source: ./
@@ -9,7 +8,7 @@ services:
     command: gcc -o /var/app/superheroes /var/app/src/main.c
 
   run:
-    image: gcc:9.5.0
+    image: gcc:16.2.0
     depends_on: 
     - build
     volumes: 
